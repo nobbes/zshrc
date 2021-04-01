@@ -7,10 +7,6 @@ plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 # Reload .bash_profile
 # alias sr='source ~/.bash_profile'
 alias sr='source ~/.zshrc'
-alias br='xelatex report.tex'
-alias or='open -a Skim.app report.pdf '
-
-
 
 # Get the 10 biggest files/folders for the current direcotry
 alias maxFile='du -s * | sort -n | tail'
@@ -243,8 +239,8 @@ ffe () { /usr/bin/find . -iname '*'"$@" ; }  # ffe:      Find file whose name en
 #   6.  NETWORKING
 #   ---------------------------
 
-#alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+# alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
+# alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
@@ -364,6 +360,9 @@ alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 #         fi
 #    }
 # extract file(s) from compressed status
+# 
+# Src: https://github.com/Bash-it/bash-it/blob/master/plugins/available/extract.plugin.bash
+# 
 extract() {
     local opt
     local OPTIND=1
