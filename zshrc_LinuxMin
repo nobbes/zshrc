@@ -2,7 +2,7 @@
 export SSLKEYLOGFILE=$HOME/sslkeylog.log
 
 # zsh Plugins
-plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages colorize pip python brew osx zsh-syntax-highlighting sublime zsh-autosuggestions)
 
 # Reload .bash_profile
 # alias sr='source ~/.bash_profile'
